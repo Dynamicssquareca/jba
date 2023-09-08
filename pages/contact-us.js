@@ -106,14 +106,14 @@ const sendEmail = (e) => {
                   <i className="bi bi-geo-alt"></i>
                 </div>
                 <div className="content-right">
-                  800 Steeles Ave. W. #B10155 Thornhill, ON. L4J 7L2
+                403, Willow Brook Drive North Brunswick, NJ, 08902, USA
                 </div>
               </div>
               <div className="contact-list">
                 <div className="icons-left">
                   <i className="bi bi-telephone"></i>
                 </div>
-                <div className="content-right">987 654 3210</div>
+                <div className="content-right">+91 805 910 2341</div>
               </div>
               <div className="contact-list">
                 <div className="icons-left">
