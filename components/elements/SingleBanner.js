@@ -9,7 +9,7 @@ const SingleBanner = () => {
         <div className='row'>
           <div className='col-lg-12'>
           <div>
-      <a href="/"><img src='/img/banner/single-bnner.png' alt='banner' /></a>
+      <Link href="/products/"><img src='/img/banner/single-bnner.png' alt='banner' /></Link>
     </div>
           </div>
         </div>

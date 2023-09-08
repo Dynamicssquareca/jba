@@ -359,7 +359,7 @@ const Index = (response = { data }) => {
                   {resProducts &&
                     resProducts.length >= 0 &&
                     resProducts.slice(0, showItems).map((productItem, i) => (
-                      <div className={`col-xxl-4 col-md-6 col-sm-6 col-6 ${showItems === i + 1 ? 'open' : ''}`} key={i}>
+                      <div className={`col-xxl-4 col-xl-4 col-md-6 col-sm-6 col-6 ${showItems === i + 1 ? 'open' : ''}`} key={i}>
 
                         <SingleProductShop
                           productName={productItem.product_name}

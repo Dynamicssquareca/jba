@@ -30,7 +30,7 @@ export default function Home({bannerdata,homecategorydata, featuredproductdata,n
         <div>
           <section className="home-slider position-relative mb-30">
             <div className="container">
-              <div className="home-slide-cover mt-30">
+              <div className="home-slide-cover">
                 {bannerData && bannerData.length >= 0 && (
                   <HomeBannerSlider banner={bannerData} />
                 )}
@@ -50,7 +50,7 @@ export default function Home({bannerdata,homecategorydata, featuredproductdata,n
               </div>
             </div>
           </section>
-          <section>
+          <section className="mt-20">
             <div className='container'>
               <div className="section-title">
                 <h2>Featured Products</h2>

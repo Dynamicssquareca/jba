@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const PromoBannerFour = () => {
   return (
     <div className='jab-prom-banner-four'>
@@ -12,7 +12,7 @@ const PromoBannerFour = () => {
       <p>Explore among various shapes and cuts</p>
       </div>
       <div className='right'>
-        <a href='#' className='btn btn-lg' >Explore Now</a>
+        <Link href='/products/' className='btn btn-lg' >Explore Now</Link>
       </div>
      
   </div>
