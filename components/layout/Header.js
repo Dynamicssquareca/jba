@@ -80,11 +80,15 @@ const Header = ({ toggleClick,categogry
                                 <div className="jab-menu jab-menu-padding jab-menu-lh-2 d-none d-lg-block  font-heading">
                                     <nav>
                                         <ul>
+                                        <li className="position-static">
+                                                <Link href="/">Home</Link>
+                                            </li>
+
                                             <li className="position-static">
                                                 <Link href="/products/">
                                                     
                                                         Shop All
-                                                        <i className="fi-rs-angle-down"></i>
+                                                       
                                                     
                                                 </Link>
                                             </li>

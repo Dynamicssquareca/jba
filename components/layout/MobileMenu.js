@@ -65,6 +65,9 @@ const MobileMenu = ({ isToggled, toggleClick, categogry }) => {
 
                             <nav>
                                 <ul className="mobile-menu" ref={domNode}>
+                                <li className="position-static">
+                                                <a href="/">Home</a>
+                                            </li>
                                 <li><a href="/products/">Shop All</a></li>
                                     {/* <li
                                         className={
