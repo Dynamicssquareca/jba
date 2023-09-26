@@ -50,5 +50,4 @@ MyApp.getInitialProps = async () => {
   return {
     menuItems,
   };
-
 };
