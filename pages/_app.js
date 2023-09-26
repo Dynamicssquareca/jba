@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps,menuItems }) {
 export default MyApp
 
 MyApp.getInitialProps = async () => {
-  const response = await fetch(AppURL.headermenu);
+  const response = await fetch(AppURL.megamenu);
   const menuItems = await response.json();
   console.log(menuItems);
   return {

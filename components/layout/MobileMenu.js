@@ -40,12 +40,12 @@ const MobileMenu = ({ isToggled, toggleClick, categogry }) => {
                     <div className="mobile-header-top">
                         <div className="mobile-header-logo">
                             <Link href="/">
-                               
-                                    <img
-                                         src="/img/themepic/jbalogo.png"
-                                        alt="logo"
-                                    />
-                                
+
+                                <img
+                                    src="/img/themepic/jbalogo.png"
+                                    alt="logo"
+                                />
+
                             </Link>
                         </div>
                         <div className="mobile-menu-close close-style-wrap close-style-position-inherit">
@@ -59,16 +59,16 @@ const MobileMenu = ({ isToggled, toggleClick, categogry }) => {
                         </div>
                     </div>
                     <div className="mobile-header-content-area">
-                       
+
                         <div className="mobile-menu-wrap mobile-header-border">
-                            
+
 
                             <nav>
                                 <ul className="mobile-menu" ref={domNode}>
-                                <li className="position-static">
-                                                <a href="/">Home</a>
-                                            </li>
-                                <li><a href="/products/">Shop All</a></li>
+                                    <li className="position-static">
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li><a href="/products/">Shop All</a></li>
                                     {/* <li
                                         className={
                                             isActive.key == 1
@@ -114,21 +114,38 @@ const MobileMenu = ({ isToggled, toggleClick, categogry }) => {
                                             <i className="fi-rs-angle-small-down"></i>
                                         </span>
                                       </li>  */}
-                                  
-                                      {categogry && categogry.map((item, i) => (
-                                                <li key={i} className={
-                                                    isActive.key == 2
-                                                        ? "menu-item-has-children active"
-                                                        : "menu-item-has-children"
-                                                }>
-                                                    <a href={`/category/${item.category_name}`.toLowerCase().split(" ").join("-")}>
 
-                                                        {item.category_name}
-                                                        <i className="fi-rs-angle-down"></i>
+                                    {categogry && categogry.map((item, i) => (
+                                        <li key={i} className={
+                                            isActive.key == item.id
+                                                ? "menu-item-has-children active"
+                                                : "menu-item-has-children"
+                                        }>
+                                            <a href={`/category/${item.category_name}`.toLowerCase().split(" ").join("-")}>
 
-                                                    </a>
-                                                </li>
-                                                 ))}
+                                                {item.category_name}
+                                                {/* <i className="bi bi-chevron-down"></i> */}
+
+                                            </a>
+                                            <span
+                                            className="menu-expand"
+                                            onClick={() => handleToggle(item.id)}
+                                        >
+                                           <i className="bi bi-chevron-down"></i>
+                                        </span>
+                                            <ul className={
+                                                isActive.key == item.id
+                                                    ? "dropdown"
+                                                    : "d-none"
+                                            }>
+                                                {item.sub_categories && item.sub_categories.map((items, j) => (
+
+                                                    <li key={j}> <a href={`/subcategory/${items.subcategory_name}`.toLowerCase().split(" ").join("-")}>{items.subcategory_name} </a></li>
+
+                                                ))}
+                                            </ul>
+                                        </li>
+                                    ))}
                                 </ul>
                             </nav>
                         </div>

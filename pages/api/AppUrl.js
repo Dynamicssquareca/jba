@@ -14,5 +14,7 @@ export class AppURL  {
     static allattribute = this.BaseURL+"/all/attribute";
     static bycategory = this.BaseURL+"/category/";
     static categorybanner = this.BaseURL+"/category/banner/";
+    static bysubcategory = this.BaseURL+"/subcategory/";
+    static megamenu = this.BaseURL+"/megamenu/categories";
 }
 export default AppURL;

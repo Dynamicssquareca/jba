@@ -5311,17 +5311,18 @@ h6.post-title {
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children .menu-expand {
   right: 0;
-  position: absolute;
-  cursor: pointer;
-  z-index: 9;
-  text-align: center;
-  font-size: 12px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 38px;
-  top: 5px;
-  color: #253D4E;
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+    text-align: center;
+    font-size: 12px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    top: 5px;
+    color: #ffffff;
+    background: #d66c6ca6;
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children .menu-expand i {
@@ -5330,11 +5331,11 @@ h6.post-title {
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children.active > .menu-expand {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(0 0 0 / 20%);
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children.active > .menu-expand i::before {
-  content: "\f112";
+  content: "\F286";
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li a {
