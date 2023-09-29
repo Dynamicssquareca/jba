@@ -17,5 +17,6 @@ export class AppURL  {
     static bysubcategory = this.BaseURL+"/subcategory/";
     static megamenu = this.BaseURL+"/megamenu/categories";
     static subcategoryfilterlistproduct = this.BaseURL+"/subcategory/product";
+    static bytesting = this.BaseURL+"/testing/";
 }
 export default AppURL;
