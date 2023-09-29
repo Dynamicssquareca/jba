@@ -72,7 +72,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
               return `productnew=${value}`;
             })
             : [];
-        axios.get(`${AppURL.subcategoryfilterlistproduct}?${pricehigh && pricehigh}${pricelow && pricelow}${newestproduct && newestproduct}category=${slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" ")}`)
+        axios.get(`${AppURL.categoryfilterlistproduct}?${pricehigh && pricehigh}${pricelow && pricelow}${newestproduct && newestproduct}category=${slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" ")}`)
           .then((res) => {
             setProducts(res.data);
           })
@@ -93,7 +93,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
   return (
     <>
       <Head>
-        <title>{slug.split("+")[0]} | JBA</title>
+        <title>{slug.charAt(0).toUpperCase() + slug.slice(1)} | JBA</title>
         <meta name="description" content="Loose Diamond Supplier, Manufacturer & Exporter from India" />
       </Head>
       <section className="pt-40">
@@ -105,7 +105,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
             
             <div className="row">
               <div className="col-lg-8">
-                <h1 className="header-h">{slug.charAt(0).toUpperCase() + slug.split("+")[0].slice(1)}</h1>
+                <h1 className="header-h">{slug.charAt(0).toUpperCase() + slug.slice(1)}</h1>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default Slug;
 export const getServerSideProps = async (context) => {
   let slug = context.query.slug;
   try {
-    const res = await fetch(AppURL.bytesting + slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" "));
+    const res = await fetch(AppURL.bysubcategory + slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" "));
     const categorybannerres = await fetch(AppURL.categorybanner + "earrings");
     const data = await res.json();
     const categorybannerdata = await categorybannerres.json();
