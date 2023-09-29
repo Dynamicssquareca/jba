@@ -9862,7 +9862,8 @@ padding-left: 15px
 }
 .filter-bg{
   /* background-color:#9bdbd6; */
-  padding:30px 30px 20px 0px
+  /* padding:30px 30px 20px 0px */
+  padding: 10px 30px 0px 0px;
 }
 .prodect-filter-wrper{
   border: 1px solid #f4d5d2;

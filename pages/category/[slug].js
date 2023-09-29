@@ -121,7 +121,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
                   <ul className="jab-tags-list">
                     <li className="hover-up">
 
-                      {slug.charAt(0).toUpperCase() + slug.slice(1)} <RiCloseCircleLine />
+                      {/* {slug.charAt(0).toUpperCase() + slug.slice(1)} <RiCloseCircleLine /> */}
 
                     </li>
 

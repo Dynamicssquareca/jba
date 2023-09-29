@@ -72,7 +72,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
               return `productnew=${value}`;
             })
             : [];
-        axios.get(`${AppURL.categoryfilterlistproduct}?${pricehigh && pricehigh}${pricelow && pricelow}${newestproduct && newestproduct}category=${slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" ")}`)
+        axios.get(`${AppURL.subcategoryfilterlistproduct}?${pricehigh && pricehigh}${pricelow && pricelow}${newestproduct && newestproduct}category=${slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" ")}`)
           .then((res) => {
             setProducts(res.data);
           })
@@ -93,7 +93,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
   return (
     <>
       <Head>
-        <title>{slug.charAt(0).toUpperCase() + slug.slice(1)} | JBA</title>
+        <title>{slug.split("+")[0]} | JBA</title>
         <meta name="description" content="Loose Diamond Supplier, Manufacturer & Exporter from India" />
       </Head>
       <section className="pt-40">
@@ -105,7 +105,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
             
             <div className="row">
               <div className="col-lg-8">
-                <h1 className="header-h">{slug.charAt(0).toUpperCase() + slug.slice(1)}</h1>
+                <h1 className="header-h">{slug.charAt(0).toUpperCase() + slug.split("+")[0].slice(1)}</h1>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
                   <ul className="jab-tags-list">
                     <li className="hover-up">
 
-                      {slug.charAt(0).toUpperCase() + slug.slice(1)} <RiCloseCircleLine />
+                      {/* {slug.charAt(0).toUpperCase() + slug.slice(1)} <RiCloseCircleLine /> */}
 
                     </li>
 

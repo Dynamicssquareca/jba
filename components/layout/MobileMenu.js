@@ -140,7 +140,7 @@ const MobileMenu = ({ isToggled, toggleClick, categogry }) => {
                                             }>
                                                 {item.sub_categories && item.sub_categories.map((items, j) => (
 
-                                                    <li key={j}> <a href={`/subcategory/${items.subcategory_name}`.toLowerCase().split(" ").join("-")}>{items.subcategory_name} </a></li>
+                                                    <li key={j}> <a href={`/subcategory/${items.subcategory_name}+${item.category_name}`.toLowerCase().split(" ").join("-")}>{items.subcategory_name} </a></li>
 
                                                 ))}
                                             </ul>
