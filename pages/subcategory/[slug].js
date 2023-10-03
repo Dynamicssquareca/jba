@@ -221,7 +221,7 @@ export default Slug;
 export const getServerSideProps = async (context) => {
   let slug = context.query.slug;
   try {
-    const res = await fetch(AppURL.bysubcategory + slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" "));
+    const res = await fetch(AppURL.bytesting + slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" "));
     const categorybannerres = await fetch(AppURL.categorybanner + "earrings");
     const data = await res.json();
     const categorybannerdata = await categorybannerres.json();
