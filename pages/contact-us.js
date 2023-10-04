@@ -106,7 +106,7 @@ const sendEmail = (e) => {
                   <i className="bi bi-geo-alt"></i>
                 </div>
                 <div className="content-right">
-                403, Willow Brook Drive North Brunswick, NJ, 08902, USA
+                180 Talmadge Road Igo Bldg <br /> Suite501 <br /> Edison NJ, 08817
                 </div>
               </div>
               <div className="contact-list">
