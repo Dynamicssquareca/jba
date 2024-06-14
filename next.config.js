@@ -9,7 +9,7 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp']
   },
   env:{
-    NEXT_PUBLIC_BACKEND_URL:'https://neweb.mailgemsroot.com'
+    NEXT_PUBLIC_BACKEND_URL:'https://api.jewelsbyanu.com'
   }
 }
 
