@@ -5,7 +5,7 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: true,
   images: {
-    domains: [`${hostname}`],
+    domains: [`${hostname}`, 'neweb.mailgemsroot.com'],
     formats: ['image/avif', 'image/webp']
   },
   env:{
