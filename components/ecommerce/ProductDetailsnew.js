@@ -183,7 +183,7 @@ const ProductDetailsnew = ({productData,relatedproduct,productreview,args,purity
                       <div className="jba-our-exp">
                       <div className="card-img">
                         <div className="v-h">
-                          <video autoPlay loop muted>
+                          <video autoPlay loop muted playsInline style={{pointerEvents:'none'}}>
                             <source
                               src="/videos/Exuisite-Craftmanship.mp4"
                               type="video/mp4"
@@ -196,7 +196,7 @@ const ProductDetailsnew = ({productData,relatedproduct,productreview,args,purity
                       </div>
                       <div className="card-img">
                         <div className="v-h">
-                          <video autoPlay loop muted>
+                          <video autoPlay loop muted playsInline style={{pointerEvents:'none'}}>
                             <source
                               src="/videos/Bis-logo.mp4"
                               type="video/mp4"
@@ -209,7 +209,7 @@ const ProductDetailsnew = ({productData,relatedproduct,productreview,args,purity
                       </div>
                       <div className="card-img">
                         <div className="v-h">
-                          <video autoPlay loop muted>
+                          <video autoPlay loop muted playsInline style={{pointerEvents:'none'}}>
                             <source
                               src="/videos/Giftworthy-packaging.mp4"
                               type="video/mp4"
