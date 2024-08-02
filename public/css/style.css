@@ -2151,10 +2151,10 @@ table .product-thumbnail img {
 }
 
 .product-cart-wrap .product-content-wrap h2 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 5px;
-  
+
 }
 
 .product-cart-wrap .product-content-wrap h2 a {
@@ -3303,6 +3303,9 @@ table .product-thumbnail img {
 .detail-gallery .product-image-slider img {
   opacity: 1;
   border-radius: 0px;
+}
+.detail-gallery .product-image-slider .swiper-slide{
+  padding-left: 15px
 }
 
 .detail-gallery .product-image-slider.slider-nav-thumbnails {
@@ -5308,17 +5311,18 @@ h6.post-title {
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children .menu-expand {
   right: 0;
-  position: absolute;
-  cursor: pointer;
-  z-index: 9;
-  text-align: center;
-  font-size: 12px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 38px;
-  top: 5px;
-  color: #253D4E;
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+    text-align: center;
+    font-size: 12px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    top: 5px;
+    color: #ffffff;
+    background: #d66c6ca6;
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children .menu-expand i {
@@ -5327,11 +5331,11 @@ h6.post-title {
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children.active > .menu-expand {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(0 0 0 / 20%);
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li.menu-item-has-children.active > .menu-expand i::before {
-  content: "\f112";
+  content: "\F286";
 }
 
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li a {
@@ -9862,8 +9866,7 @@ padding-left: 15px
 }
 .filter-bg{
   /* background-color:#9bdbd6; */
-  /* padding:30px 30px 20px 0px */
-  padding: 10px 30px 0px 0px;
+  padding:30px 30px 20px 0px
 }
 .prodect-filter-wrper{
   border: 1px solid #f4d5d2;
@@ -10124,10 +10127,10 @@ margin-bottom:40px
     text-align: center;
   }
   .jba-our-exp .v-h video{
-    position: relative;
+    position:relative;
     margin-bottom: 12px;
     width: 100%;
-    height: 65%;
+    height: 65%
   }
   .jba-our-exp .v-h{
     position: relative;
