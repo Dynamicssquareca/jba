@@ -9835,8 +9835,31 @@ padding-left: 15px
 .jab-log-form.jab-regi-form input{
   width: 100%;
 }
+
 .jab-log-form.jab-regi-form .con-pass input{
   width: 100%;
+}
+.jab-log-form.jab-regi-form .dd-check{
+  display: flex;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.jab-log-form.jab-regi-form .dd-check label{
+  color: #000000;
+}
+.jab-log-form.jab-regi-form .dd-check a{
+  color: #413e3e;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.jab-log-form.jab-regi-form .dd-check input{
+  width: 1.3em;
+    height: 1.3em;
+    margin-right:10px
+}
+.jab-log-form.jab-regi-form .dd-check .form-check-input:checked {
+  background-color: #d66c6c;
+  border-color: #d66c6c;
 }
 .jab-log-form.jab-regi-form .con-pass  .inner-1 {
 
@@ -10130,7 +10153,7 @@ margin-bottom:40px
     position:relative;
     margin-bottom: 12px;
     width: 100%;
-    height: 65px
+    height: 50px;
   }
   .jba-our-exp .v-h{
     position: relative;

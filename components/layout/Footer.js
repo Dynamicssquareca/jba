@@ -91,7 +91,7 @@ const Footer = () => {
                                         <a href="/policy">Policies</a>
                                     </li>
                                     <li>
-                                        <a href="terms-and-conditions">Terms & Conditions</a>
+                                        <a href="/terms-and-conditions/">Terms & Conditions</a>
                                     </li>
                                     
                                 </ul>
@@ -170,7 +170,7 @@ const Footer = () => {
                         </div>
                         <div className="col-xl-4 col-lg-6 col-md-6">
                             <p className="font-sm mb-0 my-p">
-                                &copy; 2023,{" "}
+                                &copy; 2024,{" "}
                                 <strong className="text-brand">Jewels by Anu</strong> - 
                                 All rights reserved
                             </p>
