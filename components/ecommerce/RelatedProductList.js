@@ -1,8 +1,11 @@
 import Link from "next/link";
-import React, { useState, useRef} from "react";
+import React, { useState, useRef,useContext} from "react";
+import CurrencyContext from "../../context/CurrencyContext";
+
  import Image from "next/image";
 const RelatedProductList = ({productName,productSlug,productprice,sku,frontImg,backImg}) => {  
     const ref=useRef();  
+    const { currency } = useContext(CurrencyContext);
   return (
     
     <>
@@ -33,27 +36,7 @@ const RelatedProductList = ({productName,productSlug,productprice,sku,frontImg,b
               </div>
        
         </div>
-        <div className="jba-action-cart">
-          <div className="product-rate-cover">
-          <div className="d-flex">
-            <div className="ratings">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-half"></i>
-                <i className="bi bi-star"></i>
-            </div>
-        </div>
-          
-          </div>
-          <div className="jba-product-action">
-             
-            <a aria-label="Add To Wishlist" className="action-btn hover-up">
-              <i className="bi bi-heart-fill"></i>
-            </a>
-            
-          </div>
-        </div>
+         
         <div className="product-content-wrap">
           <div className="product-category">
           </div>
@@ -70,14 +53,10 @@ const RelatedProductList = ({productName,productSlug,productprice,sku,frontImg,b
             
           <div className="product-card-bottom">
             <div className="product-price">
-              <span>$ {productprice}</span>
+              <span>{currency.symbol} {Math.floor(currency.rate*productprice)}</span>
               
             </div>
-            {/* <div className="add-cart">
-              <a className="add">
-                <i className="bi bi-cart4"></i> Add
-              </a>
-            </div> */}
+          
           </div>
         </div>
       </div>

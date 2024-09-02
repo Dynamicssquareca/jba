@@ -1,7 +1,10 @@
 import Link from "next/link";
-import React from "react";
+import React,{useContext} from "react";
 import Image from "next/image";
+import CurrencyContext from "../../context/CurrencyContext";
+
 const SingleProductShop = ({ productName, productSlug, sku, productPrice, productFrontImage, productBackImage }) => {
+  const { currency } = useContext(CurrencyContext);
   return (
     <>
       <div className="product-cart-wrap mb-30">
@@ -65,7 +68,7 @@ const SingleProductShop = ({ productName, productSlug, sku, productPrice, produc
 
           <div className="product-card-bottom">
             <div className="product-price">
-              <span>$ {productPrice}</span>
+              <span>{currency.symbol} {Math.floor(currency.rate * productPrice)}</span>
             </div>
           </div>
         </div>

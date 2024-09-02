@@ -93,7 +93,7 @@ const Footer = () => {
                                     <li>
                                         <a href="/terms-and-conditions/">Terms & Conditions</a>
                                     </li>
-                                    
+                                   
                                 </ul>
                             </div>
                             <div
@@ -111,7 +111,10 @@ const Footer = () => {
                                     <li>
                                         <a href="/contact-us">Contact Us</a>
                                     </li>
-                                   
+                                    <li>
+                                        <a href="/user/track-order">Track Order</a>
+                                    </li>
+                                    
                                 </ul>
                             </div>
                             {/* <div

@@ -1,9 +1,8 @@
 import Link from "next/link";
-import React, { useEffect, useState,useContext  } from "react";
+import React, { useEffect, useState } from "react";
 import Search from "../ecommerce/Search";
 import LogoutButton from "../user/UserLogout";
 import AppURL from "../../pages/api/AppUrl";
-import CurrencyContext from "../../context/CurrencyContext";
 const Header = ({ toggleClick, categogry
 }) => {
     const [isToggled, setToggled] = useState(false);
@@ -11,7 +10,6 @@ const Header = ({ toggleClick, categogry
     const [cartCount, setCartCount] = useState(0);  
     const [data, setData] = useState();
     const [token, setToken] = useState(null);
-    const { currency, updateCurrency } = useContext(CurrencyContext);
     useEffect(() => {
         document.addEventListener("scroll", () => {
             const scrollCheck = window.scrollY >= 100;
@@ -56,11 +54,6 @@ const Header = ({ toggleClick, categogry
         fetchCartItems();
       }, []);
 
-      const handleCurrencyChange = (event) => {
-        const selectedCurrency = event.target.value;
-        updateCurrency(selectedCurrency);
-      };
-
     return (
         <>
             <header className="header-area jba-header">
@@ -95,12 +88,6 @@ const Header = ({ toggleClick, categogry
                                         </p>
                                     </div>
                                 </div>
-                                <div className="currency-switcher">
-                                <select value={currency.country} onChange={handleCurrencyChange}>
-                                <option value="INR">INR</option>
-                                  <option value="USD">USD</option>
-                            </select>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -136,6 +123,7 @@ const Header = ({ toggleClick, categogry
                                             {cartCount}
                                             </span>
                                         </a>
+                                        
                                     </div>
                                     <div className="jba-header-action-icon">
                   {token ? (
@@ -166,14 +154,8 @@ const Header = ({ toggleClick, categogry
                 </div>
                 </div>
                 </div>
-                <div className="currency-switcher currency-change-mobile">
-                                <select value={currency.country} onChange={handleCurrencyChange}>
-                                <option value="INR">INR</option>
-                                <option value="USD">USD</option>
-                                </select>
-                                 </div>
                             <div className="header-nav d-none d-lg-flex">
-                           
+                                
                                 <div className="jab-menu jab-menu-padding jab-menu-lh-2 d-none d-lg-block  font-heading">
                                     <nav>
                                         <ul>
