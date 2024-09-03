@@ -12177,7 +12177,7 @@ footer .jab-mobile-social-icon {
 .mobile-cart-account-list .jba-header-action-icon {
   position: relative;
   display: flex;
-  padding: 0 10px;
+  padding: 0 3px;
   }
   .mobile-cart-account-list .jba-header-action-icon > a span {
     font-size: 14px;
@@ -12192,5 +12192,10 @@ footer .jab-mobile-social-icon {
 }
 .currency-change-mobile{
   display: block;
+}
+
+.logo.jba-logo-width a img {
+  width: 150px;
+  min-width: 150px;
 }
 }
