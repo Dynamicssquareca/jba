@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useContext} from "react";
+import CurrencyContext from "../../context/CurrencyContext";
 
 const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
   // Log items to verify they are being passed correctly
@@ -18,7 +19,7 @@ const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
     return date.toLocaleDateString('en-GB', options);
   };
 
-  
+  const { currency } = useContext(CurrencyContext); 
   return (
     <div>
       {items.map((item, index) => (
@@ -32,7 +33,7 @@ const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
           <div className="product-dec">
             <h3>{item.product_name || 'Product Name'}</h3>
             <span className="sku">SKU: {item.product_sku_code || 'N/A'}</span>
-            <span className="p-price">₹{item.amount || '0.00'}</span>
+            <span className="p-price">{currency.symbol}{Math.floor(currency.rate*item.amount) || '0.00'}</span>
           </div>
           <div className="deliver-date deliver-date-re">
             <img src="/img/themepic/icons/package.png" alt="package" />
@@ -66,7 +67,7 @@ const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
               <tbody>
                 <tr>
                   <td>Subtotal</td>
-                  <td className="text-right">₹{Subtotal.subtotal}</td>
+                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*Subtotal.subtotal)}</td>
                 </tr>
                 <tr>
                   <td>Shipping</td>
@@ -74,7 +75,7 @@ const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
                 </tr>
                 <tr>
                   <td>Total Cost</td>
-                  <td className="text-right">₹{Subtotal.subtotal}</td>
+                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*Subtotal.subtotal)}</td>
                 </tr>
                 <tr>
                   <td>Payment Method</td>
