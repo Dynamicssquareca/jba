@@ -1,7 +1,7 @@
 
 import React from "react";
 const OrderDetail = ({orderSummary}) => {
-    console.log(orderSummary);
+  
   return (
     <div>
       <strong>Shipping Address</strong><br/>

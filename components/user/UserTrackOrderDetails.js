@@ -78,7 +78,7 @@ const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
                 </tr>
                 <tr>
                   <td>Payment Method</td>
-                  <td className="text-right">Razorpay</td>
+                  <td className="text-right">COD</td>
                 </tr>
               </tbody>
             </table>

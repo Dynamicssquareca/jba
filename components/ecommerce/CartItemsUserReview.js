@@ -1,4 +1,6 @@
-import React from "react";
+import { useContext } from "react";
+import CurrencyContext from "../../context/CurrencyContext";
+
 
 const CartItemsUserReview = ({ items, address }) => {
   if (!items || !Array.isArray(items) || items.length === 0) {
@@ -19,7 +21,7 @@ const CartItemsUserReview = ({ items, address }) => {
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
     return date.toLocaleDateString('en-GB', options);
   };
-
+  const { currency } = useContext(CurrencyContext); 
   return (
     <div>
       <div className="jba-cart-product jba-cart-product-user">
@@ -30,7 +32,7 @@ const CartItemsUserReview = ({ items, address }) => {
           <h3>{item.product_name || "Product Name"}</h3>
           <span className="sku">SKU : {item.product_sku_code || "N/A"}</span>
           <span className="p-price">
-            ₹{item.amount || "0.00"}
+            {currency.symbol}{Math.floor(currency.rate*item.amount) || "0.00"}
           </span>
         </div>
         <div className="deliver-date deliver-date-re">
@@ -59,7 +61,7 @@ const CartItemsUserReview = ({ items, address }) => {
               <tbody>
                 <tr>
                   <td>Subtotal</td>
-                  <td className="text-right">₹{item.sub_total || "0.00"}</td>
+                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*item.sub_total) || "0.00"}</td>
                 </tr>
                 <tr>
                   <td>Shipping</td>
@@ -67,11 +69,11 @@ const CartItemsUserReview = ({ items, address }) => {
                 </tr>
                 <tr>
                   <td>Total Cost</td>
-                  <td className="text-right">₹{item.sub_total || "0.00"}</td>
+                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*item.sub_total) || "0.00"}</td>
                 </tr>
                 <tr>
                   <td>Payment Method</td>
-                  <td className="text-right">Razorpay</td>
+                  <td className="text-right">COD</td>
                 </tr>
               </tbody>
             </table>

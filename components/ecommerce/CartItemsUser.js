@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useContext} from "react";
+import CurrencyContext from "../../context/CurrencyContext";
  
 const CartItemsUser = ({ order }) => {
     const formatDate = (dateString) => {
@@ -9,6 +10,7 @@ const CartItemsUser = ({ order }) => {
     };
  
     if (Array.isArray(order)) {
+        const { currency } = useContext(CurrencyContext); 
         return order.map((item, index) => (
             <div key={index} className="jba-cart-product">
                 <div className="p-pic">
@@ -21,7 +23,7 @@ const CartItemsUser = ({ order }) => {
                         <a href={`/products/${item.product_slug}`}>{item.product_name}</a>
                     </h3>
                     <span className="sku">SKU : {item.product_sku_code}</span>
-                    <span className="p-price">{item.amount}</span>
+                    <span className="p-price">{currency.symbol}{Math.floor(currency.rate*item.amount)}</span>
                 </div>
                 <div className="deliver-date deliver-date-s">
                     <img src="/img/themepic/icons/package.png" alt="package" />
