@@ -50,8 +50,8 @@ const Cart = () => {
           if (contentType && contentType.includes('application/json')) {
             const data = await response.json();
             if (data.status === 1) {
-              
               setCartItems(cartItems.filter(item => item.id !== itemId));
+              window.location.reload();
             } else {
               console.error('Failed to remove item:', data.message);
             }
