@@ -4489,6 +4489,8 @@ h6.post-title {
 .jab-header-pic .jba-header-action-icon > a img {
   width: 100%;
   max-width: 24px;
+  vertical-align: middle;
+  margin-right:5px;
 }
 
 .jab-header-pic .jba-header-action-icon > a span {
@@ -12197,5 +12199,11 @@ footer .jab-mobile-social-icon {
 .logo.jba-logo-width a img {
   width: 150px;
   min-width: 150px;
+}
+.mobile-cart-account-list .jba-header-action-icon > a img {
+  width: 100%;
+  max-width: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 }
