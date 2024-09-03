@@ -5,7 +5,7 @@ import useAuth from "@/pages/hooks/useAuth";
 
 const UserSideBar = () => {
   const { userData, loading } = useAuth();
- 
+  
   if (loading) {
     return <div>Loading...</div>; 
   }
@@ -33,10 +33,14 @@ const UserSideBar = () => {
       console.error('Sign out failed', error);
     }
   };
+  let  name = userData.name; 
+  let firstLetter = name[0].toUpperCase();
+  let lastLetter = name[name.length - 1].toUpperCase();
   return (
+    
     <div className="user-list-account">
       <div className="user-i-name">
-        <div className="usname">AC</div>
+        <div className="usname">{firstLetter}{lastLetter}</div>
         <div className="user-info">
            {userData ? (
             <>
