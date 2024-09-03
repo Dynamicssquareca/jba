@@ -93,7 +93,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
         setLoading(false);
 
         if (response.ok) {
-          setSuccessMessage("Login successful! You can now add items to your cart.");
+          alert("Login successful! You can now add items to your cart.");
           localStorage.setItem('authToken', data.data.access_token);
           setModal(false);
         } else {
@@ -129,9 +129,9 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
         setLoading(false);
 
         if (response.ok) {
-          setSuccessMessage("Registration successful!");
+          alert("Registration successful!");
           localStorage.setItem('authToken', data.data.access_token);
-          window.location.replace('/user/dashboard');
+          setModal(false);
         } else {
           setApiErrors(data || "Registration failed");
         }
