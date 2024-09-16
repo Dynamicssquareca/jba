@@ -32,7 +32,7 @@ const CartItemsUserReview = ({ items, address }) => {
           <h3>{item.product_name || "Product Name"}</h3>
           <span className="sku">SKU : {item.product_sku_code || "N/A"}</span>
           <span className="p-price">
-            {currency.symbol}{Math.floor(currency.rate*item.amount) || "0.00"}
+            {currency.symbol}{Math.floor(currency.rate*item.amount).toLocaleString('en-IN') || "0.00"}
           </span>
         </div>
         <div className="deliver-date deliver-date-re">
@@ -61,7 +61,7 @@ const CartItemsUserReview = ({ items, address }) => {
               <tbody>
                 <tr>
                   <td>Subtotal</td>
-                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*item.sub_total) || "0.00"}</td>
+                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*item.sub_total).toLocaleString('en-IN') || "0.00"}</td>
                 </tr>
                 <tr>
                   <td>Shipping</td>
@@ -69,7 +69,7 @@ const CartItemsUserReview = ({ items, address }) => {
                 </tr>
                 <tr>
                   <td>Total Cost</td>
-                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*item.sub_total) || "0.00"}</td>
+                  <td className="text-right">{currency.symbol}{Math.floor(currency.rate*item.sub_total).toLocaleString('en-IN') || "0.00"}</td>
                 </tr>
                 <tr>
                   <td>Payment Method</td>

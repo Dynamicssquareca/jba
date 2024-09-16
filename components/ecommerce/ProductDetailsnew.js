@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import AppURL from "@/pages/api/AppUrl";
 import classnames from 'classnames';
 import CurrencyContext from "../../context/CurrencyContext";
+import NumberFormat from 'react-number-format';
 import {
   Accordion,
   AccordionBody,
@@ -240,8 +241,9 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                       </div>
                     </div>
                     <div className="jab-product-sigle-price">
-                      <span className="orginal-price">{currency.symbol}{Math.floor(currency.rate * product_price)}</span>
+                    <span className="orginal-price">{currency.symbol}{Math.floor(currency.rate * product_price).toLocaleString('en-IN')}</span>
                     </div>
+                    
                     <div className="add-t-cart">
                       <a href="tel:+918059102341">
                         <button

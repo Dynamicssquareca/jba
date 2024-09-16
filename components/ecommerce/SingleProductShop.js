@@ -68,7 +68,7 @@ const SingleProductShop = ({ productName, productSlug, sku, productPrice, produc
 
           <div className="product-card-bottom">
             <div className="product-price">
-              <span>{currency.symbol} {Math.floor(currency.rate * productPrice)}</span>
+              <span>{currency.symbol} {Math.floor(currency.rate * productPrice).toLocaleString('en-IN')}</span>
             </div>
           </div>
         </div>

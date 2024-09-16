@@ -53,7 +53,7 @@ const FeaturedProductList = ({productName,productSlug,productprice,sku,frontImg,
             
           <div className="product-card-bottom">
             <div className="product-price">
-              <span>{currency.symbol} {Math.floor(currency.rate*productprice)}</span>
+              <span>{currency.symbol} {Math.floor(currency.rate*productprice).toLocaleString('en-IN')}</span>
             </div>
             
           </div>

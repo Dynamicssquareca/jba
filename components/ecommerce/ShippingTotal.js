@@ -20,7 +20,7 @@ const CartTotal = ({ subtotal, totalDiscount, shipping, totalCost }) => {
             <tbody>
               <tr>
                 <th>Subtotal</th>
-                <td>{currency.symbol} {Math.floor(currency.rate*subtotal)}</td>
+                <td>{currency.symbol} {Math.floor(currency.rate*subtotal).toLocaleString('en-IN')}</td>
               </tr>
               {/* <tr>
                 <th>Total Discount</th>
@@ -37,7 +37,7 @@ const CartTotal = ({ subtotal, totalDiscount, shipping, totalCost }) => {
             <tbody>
               <tr>
                 <th>Total Cost</th>
-                <td>{currency.symbol} {Math.floor(currency.rate*totalCost)}</td>
+                <td>{currency.symbol} {Math.floor(currency.rate*totalCost).toLocaleString('en-IN')}</td>
               </tr>
             </tbody>
           </table>

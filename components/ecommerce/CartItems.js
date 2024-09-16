@@ -59,7 +59,7 @@ const CartItems = ({ items,onRemoveItem}) => {
                   </a>
                 </h3>
                 <span className="sku">SKU: {item.product.product_sku_id}</span>
-                <span className="p-price">{currency.symbol} {Math.floor(currency.rate*item.product.product_price)}</span>
+                <span className="p-price">{currency.symbol} {Math.floor(currency.rate*item.product.product_price).toLocaleString('en-IN')}</span>
               </div>
               <div className="deliver-date">
                 <img src="/img/themepic/icons/package.png" alt="package" />

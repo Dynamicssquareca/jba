@@ -26,7 +26,7 @@ const OrderProduct = ({ products }) => {
             <h3 className="success-product-title">{product.product_name}</h3>
             <span className="sku">SKU: {product.product_sku_code}</span>
             <span className="p-price">
-              {currency.symbol}{Math.floor(currency.rate*product.amount)}
+              {currency.symbol}{Math.floor(currency.rate*product.amount).toLocaleString('en-IN')}
               {/* {product.oldPrice && (
                 <span className="old-p">{currency.symbol} {Math.floor(currency.rate*product.oldPrice)}</span>
               )} */}
@@ -35,7 +35,7 @@ const OrderProduct = ({ products }) => {
         </div>
       ))}
       <h3 className="total-amount-text text-right">
-        Total Amount: {currency.symbol}{Math.floor(currency.rate*totalAmount)}
+        Total Amount: {currency.symbol}{Math.floor(currency.rate*totalAmount).toLocaleString('en-IN')}
       </h3>
       <style jsx>{`
         .success-product-title {

@@ -23,7 +23,7 @@ const CartItemsUser = ({ order }) => {
                         <a href={`/products/${item.product_slug}`}>{item.product_name}</a>
                     </h3>
                     <span className="sku">SKU : {item.product_sku_code}</span>
-                    <span className="p-price">{currency.symbol}{Math.floor(currency.rate*item.amount)}</span>
+                    <span className="p-price">{currency.symbol}{Math.floor(currency.rate*item.amount).toLocaleString('en-IN')}</span>
                 </div>
                 <div className="deliver-date deliver-date-s">
                     <img src="/img/themepic/icons/package.png" alt="package" />
