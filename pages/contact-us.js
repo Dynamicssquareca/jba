@@ -110,19 +110,19 @@ const Contactus = () => {
           </div>
           <div className="row">
             <div className="col-lg-4">
-              <div className="contact-list">
+              {/* <div className="contact-list">
                 <div className="icons-left">
                   <i className="bi bi-geo-alt"></i>
                 </div>
                 <div className="content-right">
                   180 Talmadge Road Igo Bldg <br /> Suite501 <br /> Edison NJ, 08817
                 </div>
-              </div>
+              </div> */}
               <div className="contact-list">
                 <div className="icons-left">
                   <i className="bi bi-telephone"></i>
                 </div>
-                <div className="content-right">+91 805 910 2341</div>
+                <div className="content-right">+1 281 771 1511</div>
               </div>
               <div className="contact-list">
                 <div className="icons-left">

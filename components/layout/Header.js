@@ -91,7 +91,7 @@ const Header = ({ toggleClick, categogry
                                         />
 
                                         <p>
-                                            <a href="tel:+91 8059102341"> +91 805 910 2341</a><span>24/7 Support</span>
+                                            <a href="tel:+1 281 771 1511"> +1 281 771 1511</a><span>24/7 Support</span>
                                         </p>
                                     </div>
                                 </div>
