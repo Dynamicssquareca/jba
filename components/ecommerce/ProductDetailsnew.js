@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 import AppURL from "@/pages/api/AppUrl";
 import classnames from 'classnames';
 import CurrencyContext from "../../context/CurrencyContext";
-import NumberFormat from 'react-number-format';
+ 
 import {
   Accordion,
   AccordionBody,
