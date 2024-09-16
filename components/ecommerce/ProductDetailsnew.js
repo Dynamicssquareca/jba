@@ -290,7 +290,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="email"
                                     id="loginEmail"
-                                    placeholder="Email"
+                                    placeholder="Enter Email Id"
                                     value={loginEmail}
                                     onChange={(e) => setLoginEmail(e.target.value)}
                                     invalid={!!loginErrors.email}
@@ -302,7 +302,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="password"
                                     id="loginPassword"
-                                    placeholder="Password"
+                                    placeholder="Enter Password"
                                     value={loginPassword}
                                     onChange={(e) => setLoginPassword(e.target.value)}
                                     invalid={!!loginErrors.password}
@@ -326,7 +326,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="text"
                                     id="registerName"
-                                    placeholder="Name"
+                                    placeholder="Enter Name"
                                     value={registerName}
                                     onChange={(e) => setRegisterName(e.target.value)}
                                     invalid={!!registerErrors.name}
@@ -340,7 +340,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="email"
                                     id="registerEmail"
-                                    placeholder="Email"
+                                    placeholder="Enter Email Id"
                                     value={registerEmail}
                                     onChange={(e) => setRegisterEmail(e.target.value)}
                                     invalid={!!registerErrors.email}
@@ -354,7 +354,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="password"
                                     id="registerPassword"
-                                    placeholder="Password"
+                                    placeholder="Enter Password"
                                     value={registerPassword}
                                     onChange={(e) => setRegisterPassword(e.target.value)}
                                     invalid={!!registerErrors.password}
@@ -368,7 +368,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="password"
                                     id="confirmPassword"
-                                    placeholder="Confirm Password"
+                                    placeholder="Enter Confirm Password"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     invalid={!!registerErrors.confirmPassword}
@@ -382,7 +382,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                                   <Input
                                     type="text"
                                     id="mobileNumber"
-                                    placeholder="Mobile Number"
+                                    placeholder="Enter Mobile Number"
                                     value={mobileNumber}
                                     onChange={(e) => setMobileNumber(e.target.value)}
                                     invalid={!!registerErrors.mobileNumber}
