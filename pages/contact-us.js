@@ -110,14 +110,17 @@ const Contactus = () => {
           </div>
           <div className="row">
             <div className="col-lg-4">
-              {/* <div className="contact-list">
+              <div className="contact-list">
                 <div className="icons-left">
                   <i className="bi bi-geo-alt"></i>
                 </div>
                 <div className="content-right">
-                  180 Talmadge Road Igo Bldg <br /> Suite501 <br /> Edison NJ, 08817
+                Jewels by Anu Private Limited<br/>
+                44 Nai Anaj Mandi<br/>
+                Rewari  Haryana  123401<br/>
+                India
                 </div>
-              </div> */}
+              </div>
               <div className="contact-list">
                 <div className="icons-left">
                   <i className="bi bi-telephone"></i>
