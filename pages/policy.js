@@ -52,8 +52,7 @@ const Policy = () => {
                 <p>
                   JEWELSBYANU ensures you a hassle-free return & exchange of
                   your order. We are committed to our customers' choices and we
-                  provide easy alternatives to keep up with our promise. Buyers
-                  can claim a refund or exchange within 30 days of purchase.
+                  provide easy alternatives to keep up with our promise. Buyers can claim a refund or exchange within 30 days of purchase which can take up to 9-10 days to process. We initiate the refund process once we receive the returned shipment at our end. 
                 </p>
                 <h3>How do I return the product?</h3>
                 <p>
