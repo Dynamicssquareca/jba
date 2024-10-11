@@ -3,6 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import AppURL from "@/pages/api/AppUrl";
 
 const ReactModelAddress = ({ isOpen, toggle, mode, address, onSave }) => {
+  console.log(address);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -137,13 +138,7 @@ const ReactModelAddress = ({ isOpen, toggle, mode, address, onSave }) => {
       errors.phone = "Phone Number must be 10 digits";
       isValid = false;
     }
-    if (!formData.postcode) {
-      errors.postcode = "Pincode is required";
-      isValid = false;
-    } else if (!/^\d{6}$/.test(formData.postcode)) {
-      errors.postcode = "Pincode must be 6 digits";
-      isValid = false;
-    }
+     
     if (!formData.city) {
       errors.city = "City is required";
       isValid = false;
@@ -250,15 +245,6 @@ const ReactModelAddress = ({ isOpen, toggle, mode, address, onSave }) => {
               onChange={handleChange}
             />
             {errors.email && <div className="invalid-feedback">{errors.email}</div>}
-          </div>
-          <div className="col-md-6">
-            <input
-              type="text"
-              name="phone_code"
-              className="form-control"
-              value={formData.phone_code}
-              readOnly
-            />
           </div>
           
           <div className="col-md-6">
