@@ -134,8 +134,8 @@ const ReactModelAddress = ({ isOpen, toggle, mode, address, onSave }) => {
     if (!formData.phone) {
       errors.phone = "Phone Number is required";
       isValid = false;
-    } else if (!/^\d{10}$/.test(formData.phone)) {
-      errors.phone = "Phone Number must be 10 digits";
+    } else if (!/^\d{10,12}$/.test(formData.phone)) {
+      errors.phone = "Phone Number must be 10 -12 digits";
       isValid = false;
     }
      
