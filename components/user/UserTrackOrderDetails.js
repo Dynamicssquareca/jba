@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import CurrencyContext from "../../context/CurrencyContext";
 
 const UserTrackOrderDetails = ({ items, address ,Subtotal}) => {
-  // Log items to verify they are being passed correctly
+
   console.log('Received items:', items);
 
   if (!items || !Array.isArray(items) || items.length === 0) {

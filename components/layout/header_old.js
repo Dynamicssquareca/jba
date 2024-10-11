@@ -12,7 +12,6 @@ const Header = ({ toggleClick, categogry
     const [data, setData] = useState();
     const [token, setToken] = useState(null);
     const { currency, updateCurrency } = useContext(CurrencyContext);
-    const [selectedCurrency, setSelectedCurrency] = useState("USD");
     useEffect(() => {
         document.addEventListener("scroll", () => {
             const scrollCheck = window.scrollY >= 100;
@@ -57,33 +56,10 @@ const Header = ({ toggleClick, categogry
         fetchCartItems();
       }, []);
 
-      useEffect(() => {
-        const detectCountry = async () => {
-          try {
-    
-    const response = await fetch(`https://ipinfo.io/json?token=TOKEN_KEY`);
-            const data = await response.json();
-    const country = data.country;
-     
-            
-            if (country === "IN") {
-              updateCurrency("INR");
-            } else if (country === "US") {
-              updateCurrency("USD");
-            } else {
-              updateCurrency("INR"); 
-            }
-          } catch (error) {
-            console.error("Error detecting country:", error);
-            
-            updateCurrency("INR");
-          }
-        };
-     
-        detectCountry();
-      }, [updateCurrency]);
-      
-      
+      const handleCurrencyChange = (event) => {
+        const selectedCurrency = event.target.value;
+        updateCurrency(selectedCurrency);
+      };
 
     return (
         <>
@@ -119,7 +95,12 @@ const Header = ({ toggleClick, categogry
                                         </p>
                                     </div>
                                 </div>
-                                
+                                <div className="currency-switcher">
+                                <select value={currency.country} onChange={handleCurrencyChange}>
+                                <option value="INR">INR</option>
+                                  <option value="USD">USD</option>
+                            </select>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -185,7 +166,12 @@ const Header = ({ toggleClick, categogry
                 </div>
                 </div>
                 </div>
-                 
+                <div className="currency-switcher currency-change-mobile">
+                                <select value={currency.country} onChange={handleCurrencyChange}>
+                                <option value="INR">INR</option>
+                                <option value="USD">USD</option>
+                                </select>
+                                 </div>
                             <div className="header-nav d-none d-lg-flex">
                            
                                 <div className="jab-menu jab-menu-padding jab-menu-lh-2 d-none d-lg-block  font-heading">
