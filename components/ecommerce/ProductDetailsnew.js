@@ -24,6 +24,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
   const [product_description] = useState(productData[0]['product_description']);
   const [product_front_image] = useState(productData[0]['product_front_image_url']);
   const [product_back_image] = useState(productData[0]['product_back_image_url']);
+  const [product_quantity] = useState(productData[0]['product_quantity']);
   const [relatedProductData] = useState(relatedproduct);
   const [productreviewData] = useState(productreview);
   const [modal, setModal] = useState(false);
@@ -251,17 +252,18 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                           type="button"
                           id="button-addon1"
                         >
-                          <i className="bi bi-telephone m-1"></i>Call Now
+                          <i className="bi bi-telephone m-1"></i>Call Now 
                         </button>
                       </a>
-                      <button
+                      {Number(product_quantity)>0?(<button
                         className="btn btn-2"
                         type="button"
                         id="button-addon2"
                         onClick={handleAddToCart}
                       >
                         Add to Cart
-                      </button>
+                      </button>): ''}
+                      
                       <Modal isOpen={modal} toggle={Modaltoggles} {...args} size="md">
                         <ModalHeader toggle={Modaltoggles}>Login / Register</ModalHeader>
                         <ModalBody>
