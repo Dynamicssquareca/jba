@@ -239,7 +239,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                         <h1>{product_name}</h1>
                         <span>SKU: {product_sku}</span>
                         <p>{product_short_description}</p>
-                        {Number(product_quantity)>0? ( <span>In stock</span>) :<span>Out of stock</span>}
+                        {Number(product_quantity)>0? ( <span class="text-success">In stock</span>) :<span class="text-danger">Out of stock</span>}
                       </div>
                     </div>
                     <div className="jab-product-sigle-price">
