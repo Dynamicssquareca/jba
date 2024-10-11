@@ -29,27 +29,7 @@ const SingleProductShop = ({ productName, productSlug, sku, productPrice, produc
             </Link>
           </div>
         </div>
-        <div className="jba-action-cart">
-          <div className="product-rate-cover">
-            <div className="d-flex">
-              <div className="ratings">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-half"></i>
-                <i className="bi bi-star"></i>
-              </div>
-            </div>
-
-          </div>
-          <div className="jba-product-action">
-
-            <a aria-label="Add To Wishlist" className="action-btn hover-up">
-              <i className="bi bi-heart-fill"></i>
-            </a>
-
-          </div>
-        </div>
+        
         <div className="product-content-wrap">
           <div className="product-category">
             <Link href="/products/ring/">
