@@ -125,7 +125,7 @@ const Contactus = () => {
                 <div className="icons-left">
                   <i className="bi bi-telephone"></i>
                 </div>
-                <div className="content-right">+1 281 771 1511</div>
+                <div className="content-right">+1 424 7680 455</div>
               </div>
               <div className="contact-list">
                 <div className="icons-left">
