@@ -50,39 +50,6 @@ export default function Home({bannerdata,homecategorydata, featuredproductdata,n
               </div>
             </div>
           </section>
-          <section className="mt-20">
-            <div className='container'>
-              <div className="section-title">
-                <h2>Featured Products</h2>
-              </div>
-              <div className="row">
-
-                <div className="col-lg-12">
-                  <div className='related-products position-relative'>
-                    {featuredproductData && featuredproductData.length >= 0 && (
-                      <FeaturedProduct featureddata={featuredproductData} />
-                    )}
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          <section className='p-9'>
-            <div className='container'>
-
-              <div className='row'>
-                <div className='col-lg-12'>
-                  <PromoBannerOne />
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-
-
           <section>
             <div className='container'>
               <div className="section-title">
@@ -102,6 +69,41 @@ export default function Home({bannerdata,homecategorydata, featuredproductdata,n
               </div>
             </div>
           </section>
+          <section className='p-9'>
+            <div className='container'>
+
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <PromoBannerOne />
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <section className="mt-20">
+            <div className='container'>
+              <div className="section-title">
+                <h2>Featured Products</h2>
+              </div>
+              <div className="row">
+
+                <div className="col-lg-12">
+                  <div className='related-products position-relative'>
+                    {featuredproductData && featuredproductData.length >= 0 && (
+                      <FeaturedProduct featureddata={featuredproductData} />
+                    )}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+         
+
+
+
+        
 
           <section className='p-9'>
             <div className='container'>
