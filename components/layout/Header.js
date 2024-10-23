@@ -61,7 +61,7 @@ const Header = ({ toggleClick, categogry
         const detectCountry = async () => {
           try {
     
-    const response = await fetch(`https://ipinfo.io/json?token=7fa953072f311f`);
+    const response = await fetch(`https://ipinfo.io/json?token=443421a7eb0321`);
             const data = await response.json();
     const country = data.country;
      
