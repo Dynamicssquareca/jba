@@ -60,30 +60,45 @@ const Header = ({ toggleClick, categogry
       useEffect(() => {
         const detectCountry = async () => {
           try {
-    
-    const response = await fetch(`https://ipinfo.io/json?token=443421a7eb0321`);
+          
+            const response = await fetch(`https://ipinfo.io/json?token=443421a7eb0321`);
             const data = await response.json();
-    const country = data.country;
-     
-            
-            if (country === "IN") {
-              updateCurrency("INR");
-            } else if (country === "US") {
-              updateCurrency("USD");
+            const detectedCountry = data.country; 
+        
+            const storedCountry = localStorage.getItem("country");
+            const storedCurrencyData = JSON.parse(localStorage.getItem("currencyData"));
+            const currentTime = new Date().getTime();
+        
+            let newCurrencyData = {};
+            if (detectedCountry === "IN") {
+              newCurrencyData = { country: "INR", rate: 82, symbol: "₹" };  
+            } else if (detectedCountry === "US") {
+              newCurrencyData = { country: "USD", rate: 1, symbol: "$" };  
             } else {
-              updateCurrency("INR"); 
+              newCurrencyData = { country: "INR", rate: 82, symbol: "₹" };  
+            }
+        
+            if (!storedCountry || storedCountry !== detectedCountry) {
+               
+              localStorage.setItem("country", detectedCountry);
+              localStorage.setItem("countryTimestamp", currentTime); 
+              localStorage.setItem("currencyData", JSON.stringify(newCurrencyData));
+              localStorage.setItem("selectedCurrency", newCurrencyData.country);
+        
+             updateCurrency(newCurrencyData.country);
+            } else {
+               
+              updateCurrency(storedCurrencyData?.country || "INR");
             }
           } catch (error) {
             console.error("Error detecting country:", error);
-            
-            updateCurrency("INR");
+            updateCurrency("INR");  
           }
         };
-     
+       
         detectCountry();
-      }, [updateCurrency]);
-      
-      
+      }, []);  
+ 
 
     return (
         <>
