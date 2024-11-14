@@ -75,7 +75,6 @@ const Exhibition = () => {
                      width={500}
                      height={500}
                     />
-                   
                     </div>
                     </div>
                      </SwiperSlide>
@@ -89,7 +88,6 @@ const Exhibition = () => {
                      width={500}
                      height={500}
                     />
-                    
                     </div>
                     </div>
                      </SwiperSlide>
@@ -117,7 +115,6 @@ const Exhibition = () => {
                      width={500}
                      height={500}
                     />
-                   
                     </div>
                     </div>
                      </SwiperSlide>
