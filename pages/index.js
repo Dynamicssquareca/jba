@@ -9,6 +9,7 @@ import PromoBannerTwo from '../components/elements/PromoBannerTwo';
 import PromoBannerThree from '../components/elements/PromoBannerThree';
 import PromoBannerFour from '../components/elements/PromoBannerFour';
 import BottomServiceList from '../components/elements/BottomServiceList';
+import Exhibition from "@/components/home/Exhibition";
 import AppURL from "./api/AppUrl";
 import CustomerReview from "@/components/elements/CustomerReview";
 
@@ -135,7 +136,22 @@ export default function Home({bannerdata,homecategorydata, featuredproductdata,n
               <CustomerReview />
             </div>
            </section>
+           <section className="mt-20">
+            <div className='container'>
+              <div className="section-title">
+                <h2>Exhibition Memories</h2>
+              </div>
+              <div className="row">
 
+                <div className="col-lg-12">
+                  <div className='related-products position-relative'>
+                      <Exhibition />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
 
         </div>
       </main>
