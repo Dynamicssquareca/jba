@@ -139,7 +139,7 @@ export default function Home({bannerdata,homecategorydata, featuredproductdata,n
            <section className="mt-20">
             <div className='container'>
               <div className="section-title">
-                <h2>Exhibition Memories</h2>
+                <h2>New Connections & Lovely stories to share</h2>
               </div>
               <div className="row">
 
