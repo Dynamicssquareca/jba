@@ -173,7 +173,7 @@ const Footer = () => {
                         </div>
                         <div className="col-xl-4 col-lg-6 col-md-6">
                             <p className="font-sm mb-0 my-p">
-                                &copy; 2024,{" "}
+                                &copy; 2025,{" "}
                                 <strong className="text-brand">Jewels by Anu</strong> - 
                                 All rights reserved
                             </p>
