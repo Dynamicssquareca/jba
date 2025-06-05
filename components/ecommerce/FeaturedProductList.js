@@ -42,7 +42,7 @@ const FeaturedProductList = ({productName,productSlug,productprice,sku,frontImg,
           </div>
           <h2>
             <Link href={`/products/${productSlug}`}>
-              {productName.substring(0,33)} 
+              {productName} 
             </Link>
           </h2>
 

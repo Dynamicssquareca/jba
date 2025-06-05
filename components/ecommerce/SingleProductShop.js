@@ -38,7 +38,7 @@ const SingleProductShop = ({ productName, productSlug, sku, productPrice, produc
           </div>
           <h2>
             <Link href={`/products/${productSlug}`}>
-              {productName.substring(0, 32)}
+              {productName}
             </Link>
           </h2>
 

@@ -44,7 +44,7 @@ const NewArrivalProductList = ({productName,productSlug,productprice,sku,frontIm
           </div>
           <h2>
             <Link href={`/products/${productSlug}`}>
-              {productName.substring(0, 33)} 
+              {productName} 
             </Link>
           </h2>
           <div>
