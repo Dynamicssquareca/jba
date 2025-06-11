@@ -9,87 +9,65 @@ import AppURL from "../api/AppUrl";
 const Slug = ({ slug, data ,categorybannerdata }) => {
   const [productbycategoryData] = useState(data);
   const [resProducts, setProducts] = useState(null);
-  const [featured, setFeatured] = useState([]);
   const [pricehighlow, setPriceHighLow] = useState([]);
   const [pricelowhigh, setPriceLowHigh] = useState([]);
   const [newest, setNewest] = useState([]);
   const[category_url] = useState(categorybannerdata[0]['category_banner_url']);
-  const FeaturedHandler = (e) => {
-    const { name } = e.target
-    if (featured.includes(name)) {
-      const newArr = featured.filter((like) => like !== name);
-      setFeatured(newArr);
-    } else {
-      setFeatured((p) => [...p, name]);
-    }
-  };
-  const HighLowHandler = (e) => {
-    const { name } = e.target
+   const HighLowHandler = (e) => {
+    const { name } = e.target;
     if (pricehighlow.includes(name)) {
-      const newArr = pricehighlow.filter((like) => like !== name);
-      setPriceHighLow(newArr);
+      setPriceHighLow(pricehighlow.filter((p) => p !== name));
     } else {
-      setPriceHighLow((p) => [...p, name]);
+      setPriceHighLow([...pricehighlow, name]);
     }
   };
+
   const LowHighHandler = (e) => {
-    const { name } = e.target
+    const { name } = e.target;
     if (pricelowhigh.includes(name)) {
-      const newArr = pricelowhigh.filter((like) => like !== name);
-      setPriceLowHigh(newArr);
+      setPriceLowHigh(pricelowhigh.filter((p) => p !== name));
     } else {
-      setPriceLowHigh((p) => [...p, name]);
+      setPriceLowHigh([...pricelowhigh, name]);
     }
   };
+
   const NewestHandler = (e) => {
     const { name } = e.target;
     if (newest.includes(name)) {
-      const newArr = newest.filter((like) => like !== name);
-      setNewest(newArr);
+      setNewest(newest.filter((n) => n !== name));
     } else {
-      setNewest((p) => [...p, name]);
+      setNewest([...newest, name]);
     }
   };
-  useEffect(() => {
-    if (data) {
-      const check = featured.length > 0 || pricehighlow.length > 0 || pricelowhigh.length > 0 || newest.length > 0;
-      if (check) {
-        const pricehigh =
-          pricehighlow.length > 0
-            ? pricehighlow.map((value) => {
-              return `pricehightolow=${value}`;
-            })
-            : [];
-        const pricelow =
-          pricelowhigh.length > 0
-            ? pricelowhigh.map((value) => {
-              return `pricelowtohigh=${value}`;
-            })
-            : [];
-        const newestproduct =
-          newest.length > 0
-            ? newest.map((value) => {
-              return `productnew=${value}`;
-            })
-            : [];
-        axios.get(`${AppURL.categoryfilterlistproduct}?${pricehigh && pricehigh}${pricelow && pricelow}${newestproduct && newestproduct}category=${slug.charAt(0).toUpperCase() + slug.slice(1).split("-").join(" ")}`)
-          .then((res) => {
-            setProducts(res.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
-      else {
-        setProducts(productbycategoryData)
-      }
-    }
 
-    else {
+   
+  useEffect(() => {
+    if (
+      pricehighlow.length === 0 &&
+      pricelowhigh.length === 0 &&
+      newest.length === 0
+    ) {
+      setProducts(productbycategoryData);
       return;
     }
 
-  })
+    let filtered = [...productbycategoryData];
+    if (pricehighlow.includes("HighLow")) {
+      filtered.sort((a, b) => b.product_price - a.product_price);
+    }
+
+    if (pricelowhigh.includes("LowHigh")) {
+      filtered.sort((a, b) => a.product_price - b.product_price);
+    }
+
+    if (newest.includes("Newest")) {
+      filtered.sort(
+        (a, b) => new Date(b.created_at || b.date_added) - new Date(a.created_at || a.date_added)
+      );
+    }
+
+    setProducts(filtered);
+  }, [pricehighlow, pricelowhigh, newest, productbycategoryData]);
   return (
     <>
       <Head>
@@ -147,7 +125,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-4">
+             <div className="col-xl-3 col-lg-4">
               <div className="prodect-filter-wrper sticky-top">
                 <div className="fliter-head">
                   <h3>Filter By</h3>
@@ -155,28 +133,15 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
                 <div className="h-600">
                   <div className="filter-list-sec">
                     <h4>Sort By</h4>
-
                     <div className="form-check jba-checkbox">
-                      <div >
-                        <input
-                          className="form-check-input"
-                          id="0"
-                          type="checkbox"
-                          name="Featured"
-                          onChange={(e) => FeaturedHandler(e)}
-
-                        />
-                        <label className="form-check-label" htmlFor="0">
-                          Featured
-                        </label>
-                      </div>
                       <div>
                         <input
                           className="form-check-input"
                           type="checkbox"
                           name="HighLow"
-                          onChange={(e) => HighLowHandler(e)}
+                          onChange={HighLowHandler}
                           id="1"
+                          checked={pricehighlow.includes("HighLow")}
                         />
                         <label className="form-check-label" htmlFor="1">
                           Price High to Low
@@ -187,8 +152,9 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
                           className="form-check-input"
                           type="checkbox"
                           name="LowHigh"
-                          onChange={(e) => LowHighHandler(e)}
+                          onChange={LowHighHandler}
                           id="2"
+                          checked={pricelowhigh.includes("LowHigh")}
                         />
                         <label className="form-check-label" htmlFor="2">
                           Price Low to High
@@ -199,8 +165,9 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
                           className="form-check-input"
                           type="checkbox"
                           name="Newest"
-                          onChange={(e) => NewestHandler(e)}
+                          onChange={NewestHandler}
                           id="3"
+                          checked={newest.includes("Newest")}
                         />
                         <label className="form-check-label" htmlFor="3">
                           Newest
