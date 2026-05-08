@@ -247,7 +247,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                     </div>
                     
                     <div className="add-t-cart">
-                      <a href="tel:+918059102341">
+                      {/* <a href="tel:+918059102341">
                         <button
                           className="btn btn-1"
                           type="button"
@@ -255,7 +255,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                         >
                           <i className="bi bi-telephone m-1"></i>Call Now 
                         </button>
-                      </a>
+                      </a> */}
                       {Number(product_quantity)>0?(<button
                         className="btn btn-2"
                         type="button"
@@ -404,7 +404,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                         </ModalBody>
                       </Modal>
                     </div>
-                    <div className="jba-our-exp">
+                    {/* <div className="jba-our-exp">
                       <div className="card-img">
                         <div className="v-h">
                           <video autoPlay loop muted playsInline style={{ pointerEvents: 'none' }}>
@@ -435,7 +435,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                           Gift-Worthy <br /> Packaging
                         </span>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="jba-prod-dec-bootm-acc">
                       <Accordion
                         className="jab-accordion"
