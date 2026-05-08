@@ -51,7 +51,7 @@ const ThumbSlider = ({ imageOne, imageTwo, productName }) => {
         ))}
       </Swiper>
 
-      {/* Thumbnail Slider */}
+      {/* Thumbnail Slider */} 
       <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={12}
