@@ -135,7 +135,7 @@ const ThumbSlider = ({
                   </video>
   
                   <div className="play-icon">
-                    ▶
+                    <svg class="icon-play-thumb " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 25H25V1H1V25Z" fill="none"></path>      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.71814 6.71984C9.0517 6.31605 8.19995 6.79588 8.19995 7.5751V18.311C8.19995 19.1138 9.09826 19.5893 9.76217 19.1379L18.1123 13.4612C18.7146 13.0518 18.6912 12.1564 18.0682 11.779L9.71814 6.71984Z" fill="currentColor"></path>    </svg>
                   </div>
                 </div>
               )}
