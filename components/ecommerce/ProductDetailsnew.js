@@ -24,6 +24,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
   const [product_description] = useState(productData[0]['product_description']);
   const [product_front_image] = useState(productData[0]['product_front_image_url']);
   const [product_back_image] = useState(productData[0]['product_back_image_url']);
+  const [product_video] = useState(productData[0]['product_video_url']);
   const [product_quantity] = useState(productData[0]['product_quantity']);
   const [relatedProductData] = useState(relatedproduct);
   const [productreviewData] = useState(productreview);
@@ -213,7 +214,7 @@ const ProductDetailsnew = ({ productData, relatedproduct, productreview, args, p
                 <div className="col-md-5 col-sm-12 col-xs-12 mb-md-0 mb-sm-5">
                   <div className="detail-gallery sticky-top-product">
                     <div className="product-image-slider">
-                      <ThumbSlider imageOne={product_front_image} imageTwo={product_back_image} productName={product_name} />
+                      <ThumbSlider imageOne={product_front_image} imageTwo={product_back_image} productName={product_name} video={product_video} />
                     </div>
                   </div>
                 </div>
