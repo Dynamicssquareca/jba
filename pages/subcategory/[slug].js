@@ -74,22 +74,29 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
         <title>{slug.charAt(0).toUpperCase() + slug.slice(1)} | JBA</title>
         <meta name="description" content="Loose Diamond Supplier, Manufacturer & Exporter from India" />
       </Head>
-      <section className="pt-40">
+       <section className="category-banner-section">
+  <div className="container-fluid px-0">
+    <div
+      className="product-subcategory-header"
+      style={{
+        backgroundImage: `url(${category_url})`,
+      }}
+    >
+      <div className="banner-overlay">
         <div className="container">
-          <div className="product-header" style={{
-            background: `url(${category_url}) no-repeat center top`,
-            backgroundSize: "cover",
-          }}>
-            
-            <div className="row">
-              <div className="col-lg-8">
-                <h1 className="header-h">{slug.charAt(0).toUpperCase() + slug.slice(1)}</h1>
-              </div>
+          <div className="row align-items-center h-100">
+            <div className="col-lg-7">
+              <h1 className="header-h">
+                {slug.replaceAll("-", " ")}
+              </h1>
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
+{/* 
       <section className="pb">
         <div className="container">
           <div className="filter-bg">
@@ -109,7 +116,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="pb-60 pt-20">
         <div className="container">

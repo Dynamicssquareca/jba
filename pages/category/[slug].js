@@ -74,23 +74,63 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
         <title>{slug.charAt(0).toUpperCase() + slug.slice(1)} | JBA</title>
         <meta name="description" content="Loose Diamond Supplier, Manufacturer & Exporter from India" />
       </Head>
-      <section className="pt-40">
-        <div className="container">
-          <div className="product-header" style={{
-            background: `url(${category_url}) no-repeat center top`,
-            backgroundSize: "cover",
-          }}>
-            
-            <div className="row">
-              <div className="col-lg-8">
-                <h1 className="header-h">{slug.charAt(0).toUpperCase() + slug.slice(1)}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="pb-40">
+  <div className="container-fluid px-0">
+    <div
+      className="roduct-category-header"
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        height: "500px",  
+      }}
+    >
+      
+      <img
+        src={category_url}
+        alt="Category Banner"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",  
+          display: "block",
+        }}
+      />
+ 
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0,0,0,0.15)",
+        }}
+      ></div>
+ 
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "60px",
+          transform: "translateY(-50%)",
+          zIndex: 2,
+        }}
+      >
+        <h1
+          className="header-h"
+          style={{
+            color: "#fff",
+            fontSize: "70px",
+            fontWeight: "700",
+            margin: 0,
+            textTransform: "capitalize",
+          }}
+        >
+          {slug}
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section className="pb">
+      {/* <section className="pb">
         <div className="container">
           <div className="filter-bg">
             <div className="row">
@@ -109,7 +149,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="pb-60 pt-20">
         <div className="container">
