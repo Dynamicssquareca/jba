@@ -13,6 +13,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
   const [pricelowhigh, setPriceLowHigh] = useState([]);
   const [newest, setNewest] = useState([]);
   const[category_url] = useState(categorybannerdata[0]['category_banner_url']);
+  const subcategoryTitle = productbycategoryData?.[0]?.product_subcategory;
    const HighLowHandler = (e) => {
     const { name } = e.target;
     if (pricehighlow.includes(name)) {
@@ -87,7 +88,7 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
           <div className="row align-items-center h-100">
             <div className="col-lg-7">
               <h1 className="header-h">
-                {slug.replaceAll("-", " ")}
+                {subcategoryTitle}
               </h1>
             </div>
           </div>
