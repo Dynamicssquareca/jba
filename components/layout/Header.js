@@ -11,6 +11,7 @@ const Header = ({ toggleClick, categogry
     const [cartCount, setCartCount] = useState(0);  
     const [data, setData] = useState();
     const [token, setToken] = useState(null);
+    const [showSearch, setShowSearch] = useState(false);
     const { currency, updateCurrency } = useContext(CurrencyContext);
     const [selectedCurrency, setSelectedCurrency] = useState("USD");
     useEffect(() => {
@@ -160,6 +161,9 @@ const Header = ({ toggleClick, categogry
                             </div>
                             <div className="mobile-cart-account">
                             <div className="mobile-cart-account-list">
+                              <div className="mobile-search-btn" onClick={() => setShowSearch(true)}>
+                              <i className="bi bi-search"></i>
+                             </div>
                             <div className="jba-header-action-icon">
                                         <a href="/cart" className="mini-cart-icon">
                                             <img
@@ -194,7 +198,7 @@ const Header = ({ toggleClick, categogry
                   ) : (
                     <a href="/user/login">
                       <img className="svgInject" alt="Login" src="/img/themepic/icons/icon-user.svg" />
-                      <span className="lable">Login</span>
+                      {/* <span className="lable">Login</span> */}
                     </a>
                   )}
                 </div>
@@ -270,7 +274,7 @@ const Header = ({ toggleClick, categogry
                     <>
                       <a href="/user/dashboard/">
                         <img className="svgInject" alt="Account" src="/img/themepic/icons/icon-user.svg" />
-                        <span className="lable">Account</span>
+                        {/* <span className="lable">Account</span> */}
                       </a>
                       <div className="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                         <ul>
@@ -288,7 +292,7 @@ const Header = ({ toggleClick, categogry
                   ) : (
                     <a href="/user/login">
                       <img className="svgInject" alt="Login" src="/img/themepic/icons/icon-user.svg" />
-                      <span className="lable">Login</span>
+                      {/* <span className="lable">Login</span> */}
                     </a>
                   )}
                 </div>
@@ -307,6 +311,22 @@ const Header = ({ toggleClick, categogry
                         </div>
                     </div>
                 </div>
+                {showSearch && (
+              <div className="mobile-search-modal d-lg-none">
+              <div className="mobile-search-header">
+              <div className="mobile-search-box">
+                <Search />
+              </div>
+              <button
+                className="mobile-search-close"
+                onClick={() => setShowSearch(false)}
+              >
+                <i className="bi bi-x-lg"></i>
+              </button>
+
+              </div>
+              </div>
+              )}
             </header>
         </>
     );
