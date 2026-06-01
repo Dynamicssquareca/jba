@@ -114,17 +114,19 @@ const Slug = ({ slug, data ,categorybannerdata }) => {
         }}
       >
         <h1
-          className="header-h"
-          style={{
-            color: "#fff",
-            fontSize: "70px",
-            fontWeight: "700",
-            margin: 0,
-            textTransform: "capitalize",
-          }}
-        >
-          {slug}
-        </h1>
+  className="header-h"
+  style={{
+    color: "#fff",
+    fontSize: "70px",
+    fontWeight: "700",
+    margin: 0,
+  }}
+>
+  {slug
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")}
+</h1>
       </div>
     </div>
   </div>
