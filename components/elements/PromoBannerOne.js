@@ -8,7 +8,7 @@ const PromoBannerOne = () => {
         <>
         
         <Link href="/products/">
-              <Image src="/img/banner/dumm-abnner.png" alt="ik" width={1920} height={219} />
+              <Image src="/img/banner/JBA-banner-mid-section.webp" alt="ik" width={1920} height={219} />
              </Link>
         </>
         
