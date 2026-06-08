@@ -13,7 +13,7 @@ import CurrencyContext from "../context/CurrencyContext";
 function MyApp({ Component, pageProps, menuItems }) {
   const router = useRouter();
   const [progress, setProgress] = useState(0);
-  const [currency, setCurrency] = useState({ country: "INR", rate: 83.28, symbol: "₹" });
+  const [currency, setCurrency] = useState({ country: "INR", rate: 95.69, symbol: "₹" });
 
   const debounce = (func, delay) => {
     let timeout;

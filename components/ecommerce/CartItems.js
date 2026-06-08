@@ -43,7 +43,7 @@ const CartItems = ({ items,onRemoveItem}) => {
           const createdDate = parseCustomDate(item.created_at);
 
           
-          const deliveryDate = addDays(createdDate, 7);
+          const deliveryDate = addDays(createdDate, 28);
 
           return (
             <div key={item.id} className="jba-cart-product">

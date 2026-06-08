@@ -72,11 +72,11 @@ const Header = ({ toggleClick, categogry
         
             let newCurrencyData = {};
             if (detectedCountry === "IN") {
-              newCurrencyData = { country: "INR", rate: 82, symbol: "₹" };  
+              newCurrencyData = { country: "INR", rate: 95.69, symbol: "₹" };  
             } else if (detectedCountry === "US") {
               newCurrencyData = { country: "USD", rate: 1, symbol: "$" };  
             } else {
-              newCurrencyData = { country: "INR", rate: 82, symbol: "₹" };  
+              newCurrencyData = { country: "INR", rate: 95.69, symbol: "₹" };  
             }
         
             if (!storedCountry || storedCountry !== detectedCountry) {

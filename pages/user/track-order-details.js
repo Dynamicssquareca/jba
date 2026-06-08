@@ -14,7 +14,7 @@ const CartItemsUserReview = ({ items, address }) => {
     const date = new Date(dateString);
 
     // Add 7 days to the date
-    date.setDate(date.getDate() + 7);
+    date.setDate(date.getDate() + 28);
 
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
     return date.toLocaleDateString('en-GB', options);

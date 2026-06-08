@@ -4,7 +4,7 @@ import CurrencyContext from "../../context/CurrencyContext";
 const CartItemsUser = ({ order }) => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
-        date.setDate(date.getDate() + 7); 
+        date.setDate(date.getDate() + 28); 
         const options = { day: '2-digit', month: 'short', year: 'numeric' };
         return date.toLocaleDateString('en-GB', options);
     };
