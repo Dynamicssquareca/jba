@@ -78,19 +78,18 @@ const Header = ({ toggleClick, categogry
             } else {
               newCurrencyData = { country: "INR", rate: 95.69, symbol: "₹" };  
             }
-        
-            if (!storedCountry || storedCountry !== detectedCountry) {
-               
-              localStorage.setItem("country", detectedCountry);
-              localStorage.setItem("countryTimestamp", currentTime); 
-              localStorage.setItem("currencyData", JSON.stringify(newCurrencyData));
-              localStorage.setItem("selectedCurrency", newCurrencyData.country);
-        
-             updateCurrency(newCurrencyData.country);
-            } else {
-               
-              updateCurrency(storedCurrencyData?.country || "INR");
-            }
+          
+          localStorage.setItem("country", detectedCountry);
+          localStorage.setItem("countryTimestamp", currentTime);
+          localStorage.setItem("currencyData", JSON.stringify(newCurrencyData));
+
+          const selectedCurrency =
+            localStorage.getItem("selectedCurrency") ||
+            newCurrencyData.country;
+
+          localStorage.setItem("selectedCurrency", selectedCurrency);
+
+          updateCurrency(selectedCurrency);
           } catch (error) {
             console.error("Error detecting country:", error);
             updateCurrency("INR");  
